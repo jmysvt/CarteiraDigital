@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,6 +15,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -27,8 +29,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             CarteiraDigitalTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding -> CarteiraDigital(
-                    Modifier.padding(paddingValues = innerPadding)
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    CarteiraDigital(
+                        modifier = Modifier.padding(paddingValues = innerPadding).fillMaxSize()
                 )
 
 
@@ -39,34 +42,42 @@ class MainActivity : ComponentActivity() {
     }
     @Composable
     fun CarteiraDigital(modifier: Modifier = Modifier){
-        Column(modifier = modifier) {
+
+        Column(
+            modifier = modifier,
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.SpaceAround
+        ) {
             Image(
                 painter = painterResource(id = R.drawable.senai),
                 contentDescription = "logo senai",
-                modifier = Modifier.size(400.dp)
+                modifier = Modifier.weight(2f).padding(horizontal = 20.dp)
 
             )
 
             Image(
-                painter = painterResource(id = R.drawable.perfil),
+                painter = painterResource(id = R.drawable.img),
                 contentDescription = "foto de perfil",
+                modifier = Modifier.weight(3f)
             )
 
-            Row() {
+            Row(modifier = Modifier.weight(.3f)) {
                 Text(text = "Nome: ",
                 fontWeight = FontWeight.Bold)
                 Text(text = "Jamily Alecrim")
 
+
             }
 
-            Row() {
+            Row(modifier = Modifier.weight(.3f)) {
                 Text(text = "Turma: ",
                     fontWeight = FontWeight.Bold)
                 Text(text = "3DEVMA ")
 
             }
 
-            QrCode( "90000000001417170883"
+            QrCode( "90000000001417170883",
+                modifier = Modifier.weight(2f)
 
             )
 
