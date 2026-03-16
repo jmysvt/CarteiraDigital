@@ -4,27 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountCircle
-import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import com.example.carteiradigital.CarteirinhaView
-import com.example.carteiradigital.core.designsystem.components.theme.CarteiraDigitalTheme
+
 
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
@@ -32,72 +13,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            CarteiraDigitalTheme {
-                Scaffold(
-                    topBar = {
-                        TopAppBar(
-                            colors = TopAppBarDefaults.topAppBarColors(
-                                containerColor = MaterialTheme.colorScheme.primaryContainer,
-                                titleContentColor = MaterialTheme.colorScheme.primary,
-                            ),
-                            title = {
-                                Text("Mazda Miata")
-                            }
-                        )
-                    },
-                    bottomBar = {
-                        BottomAppBar(
-                            containerColor = MaterialTheme.colorScheme.primaryContainer,
-                            contentColor = MaterialTheme.colorScheme.primary,
-                        ) {
-                            Text(
-                                modifier = Modifier.Companion
-                                    .fillMaxWidth(),
-                                textAlign = TextAlign.Companion.Center,
-                                text = "MX5",
-                            )
-                        }
-                    },
-                    floatingActionButton = {
-                        FloatingActionButton(onClick = {}) {
-                            Icon(Icons.Default.AccountCircle, contentDescription = "Add")
-                        }
-                    })
-                { innerPadding ->
-                    CarteirinhaView(
-                        modifier = Modifier.Companion
-                            .padding(paddingValues = innerPadding)
-                            .fillMaxSize()
-                    )
-
-
-                }
-
-            }
+            App()
         }
-    }
-
-    @Preview(
-        showBackground = true,
-        showSystemUi = true
-    )
-
-    @Composable
-    fun PreviewCarteiraClaro(){
-        CarteiraDigitalTheme(darkTheme = false) {
-            CarteirinhaView(modifier = Modifier.Companion.padding(16.dp))
-        }
-    }
-    @Preview(
-        showBackground = true,
-        showSystemUi = true
-    )
-
-    @Composable
-    fun PreviewCarteiraEscuro(){
-        CarteiraDigitalTheme(darkTheme = true) {
-            CarteirinhaView(modifier = Modifier.Companion.padding(16.dp))
-        }
-
     }
 }

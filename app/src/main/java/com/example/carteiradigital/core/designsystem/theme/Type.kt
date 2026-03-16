@@ -1,4 +1,4 @@
-package com.example.carteiradigital.core.designsystem.components.theme
+package com.example.carteiradigital.core.designsystem.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.font.FontFamily

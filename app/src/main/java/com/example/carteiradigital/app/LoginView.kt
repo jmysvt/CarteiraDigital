@@ -1,4 +1,4 @@
-package com.example.carteiradigital.freature.auth.apresetation
+package com.example.carteiradigital.app
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -14,7 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.carteiradigital.core.designsystem.components.theme.CarteiraDigitalTheme
+import com.example.carteiradigital.core.designsystem.theme.CarteiraDigitalTheme
 
 @Composable
 fun LoginView(modifier: Modifier = Modifier){
