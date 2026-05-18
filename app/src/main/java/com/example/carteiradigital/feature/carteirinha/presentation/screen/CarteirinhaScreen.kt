@@ -8,7 +8,7 @@ fun CarteirinhaScreen(
     modifier: Modifier = Modifier
 ) {
     CarteirinhaContent(
-        qrCodeContent = "seunumerodematriculaaqui",
+        qrCodeContent = "90000000001417170883",
         modifier = modifier
     )
 }
