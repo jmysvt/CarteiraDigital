@@ -12,6 +12,7 @@ composeBom = "2024.09.00"
 foundation = "1.10.4"
 navigationCompose = "2.9.7"
 navigationComposeVersion = "2.8.3"
+composeMaterial3 = "1.6.1"
 
 [libraries]
 androidx-compose-ui-text-google-fonts = { module = "androidx.compose.ui:ui-text-google-fonts" }
@@ -34,6 +35,7 @@ androidx-compose-material3 = { group = "androidx.compose.material3", name = "mat
 zxing-core = { module = "com.google.zxing:core", version.ref = "core" }
 androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "foundation" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+compose-material3 = { group = "androidx.wear.compose", name = "compose-material3", version.ref = "composeMaterial3" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
