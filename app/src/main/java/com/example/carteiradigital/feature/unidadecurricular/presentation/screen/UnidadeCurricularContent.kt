@@ -1,4 +1,4 @@
-package com.example.carteiradigital.feature.carteirinha.presentation.screen
+package com.example.carteiradigital.feature.unidadecurricular.presentation.screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -17,8 +17,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.carteiradigital.core.designsystem.theme.CarteiraDigitalTheme
-import com.example.carteiradigital.feature.carteirinha.presentation.component.UnidadeCurricularCard
-import com.example.carteiradigital.feature.domain.UnidadeCurricular
+import com.example.carteiradigital.feature.unidadecurricular.presentation.UnidadeCurricularEvent
+import com.example.carteiradigital.feature.unidadecurricular.presentation.UnidadeCurricularUiState
+import com.example.carteiradigital.feature.unidadecurricular.presentation.component.UnidadeCurricularCard
+import com.example.carteiradigital.feature.unidadecurricular.domain.model.UnidadeCurricular
 
 @Composable
 fun UnidadeCurricularContent(

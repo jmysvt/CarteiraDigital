@@ -1,4 +1,4 @@
-package com.example.carteiradigital.feature.domain
+package com.example.carteiradigital.feature.unidadecurricular.domain.model
 
 data class UnidadeCurricular(
     val id: String,

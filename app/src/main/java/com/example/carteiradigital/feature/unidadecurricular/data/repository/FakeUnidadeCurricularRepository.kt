@@ -1,6 +1,6 @@
-package com.example.carteiradigital.feature.unidadecurricular.repository
+package com.example.carteiradigital.feature.unidadecurricular.data.repository
 
-import com.example.carteiradigital.feature.domain.UnidadeCurricular
+import com.example.carteiradigital.feature.unidadecurricular.domain.model.UnidadeCurricular
 import kotlinx.coroutines.delay
 
 class FakeUnidadeCurricularRepository : UnidadeCurricularRepository {

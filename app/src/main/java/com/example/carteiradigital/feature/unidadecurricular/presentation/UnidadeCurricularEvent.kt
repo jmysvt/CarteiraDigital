@@ -1,4 +1,4 @@
-package com.example.carteiradigital.feature.carteirinha.presentation.screen
+package com.example.carteiradigital.feature.unidadecurricular.presentation
 
 sealed interface UnidadeCurricularEvent {
     data object OnCarregarDados : UnidadeCurricularEvent

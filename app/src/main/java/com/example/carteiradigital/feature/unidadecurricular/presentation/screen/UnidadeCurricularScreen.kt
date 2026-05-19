@@ -1,4 +1,4 @@
-package com.example.carteiradigital.feature.carteirinha.presentation.screen
+package com.example.carteiradigital.feature.unidadecurricular.presentation.screen
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -8,6 +8,10 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.material3.AppScaffold
+import com.example.carteiradigital.core.designsystem.component.AppDrawerItem
+import com.example.carteiradigital.core.designsystem.component.AppScaffold
+import com.example.carteiradigital.feature.unidadecurricular.presentation.UnidadeCurricularEvent
+import com.example.carteiradigital.feature.unidadecurricular.presentation.UnidadeCurricularViewModel
 
 
 @Composable

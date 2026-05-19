@@ -13,6 +13,8 @@ foundation = "1.10.4"
 navigationCompose = "2.9.7"
 navigationComposeVersion = "2.8.3"
 composeMaterial3 = "1.6.1"
+material3Android = "1.4.0"
+roomKtx = "2.8.4"
 
 [libraries]
 androidx-compose-ui-text-google-fonts = { module = "androidx.compose.ui:ui-text-google-fonts" }
@@ -36,6 +38,8 @@ zxing-core = { module = "com.google.zxing:core", version.ref = "core" }
 androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "foundation" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 compose-material3 = { group = "androidx.wear.compose", name = "compose-material3", version.ref = "composeMaterial3" }
+androidx-compose-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

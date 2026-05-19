@@ -1,9 +1,11 @@
-package com.example.carteiradigital.feature.carteirinha.presentation.screen
+package com.example.carteiradigital.feature.unidadecurricular.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.carteiradigital.feature.unidadecurricular.repository.FakeUnidadeCurricularRepository
-import com.example.carteiradigital.feature.unidadecurricular.repository.UnidadeCurricularRepository
+import com.example.carteiradigital.feature.unidadecurricular.presentation.UnidadeCurricularEvent
+import com.example.carteiradigital.feature.unidadecurricular.presentation.UnidadeCurricularUiState
+import com.example.carteiradigital.feature.unidadecurricular.data.repository.FakeUnidadeCurricularRepository
+import com.example.carteiradigital.feature.unidadecurricular.data.repository.UnidadeCurricularRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

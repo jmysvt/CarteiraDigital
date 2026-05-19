@@ -1,6 +1,6 @@
-package com.example.carteiradigital.feature.carteirinha.presentation.screen
+package com.example.carteiradigital.feature.unidadecurricular.presentation
 
-import com.example.carteiradigital.feature.domain.UnidadeCurricular
+import com.example.carteiradigital.feature.unidadecurricular.domain.model.UnidadeCurricular
 
 data class UnidadeCurricularUiState(
     val isLoading: Boolean = false,
