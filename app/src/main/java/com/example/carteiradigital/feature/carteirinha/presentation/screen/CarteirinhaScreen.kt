@@ -1,14 +1,48 @@
 package com.example.carteiradigital.feature.carteirinha.presentation.screen
 
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.carteiradigital.core.designsystem.component.AppDrawerItem
+import com.example.carteiradigital.core.designsystem.component.AppScaffold
+import com.example.carteiradigital.feature.carteirinha.presentation.CarteirinhaContent
+import com.example.carteiradigital.feature.carteirinha.presentation.CarteirinhaEvent
 
 @Composable
 fun CarteirinhaScreen(
-    modifier: Modifier = Modifier
+    usuarioNome: String,
+    usuarioDescricao: String,
+    drawerItems: List<AppDrawerItem>,
+    onLogoutClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    onBackClick: () -> Unit,
+    viewModel: CarteirinhaViewModel = viewModel()
 ) {
-    CarteirinhaContent(
-        qrCodeContent = "90000000001417170883",
-        modifier = modifier
-    )
+    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+
+    AppScaffold(
+        title = "Carteirinha",
+        subtitle = "Documento digital do aluno",
+        usuarioNome = usuarioNome,
+        usuarioDescricao = usuarioDescricao,
+        drawerItems = drawerItems,
+        onLogoutClick = onLogoutClick,
+        showBackButton = true,
+        onBackClick = onBackClick
+    ) { innerPadding ->
+        CarteirinhaContent(
+            uiState = uiState,
+            onEvent = { event ->
+                when (event) {
+                    CarteirinhaEvent.OnVoltarClick -> onBackClick()
+                    else -> viewModel.onEvent(event)
+                }
+            },
+            modifier = modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        )
+    }
 }

@@ -1,5 +1,7 @@
 package com.example.carteiradigital.feature.auth.presentation
 
+import com.example.carteiradigital.feature.domain.model.UsuarioLogado
+
 data class LoginUiState(
     val login: String = "",
     val senha: String = "",

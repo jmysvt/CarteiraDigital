@@ -1,3 +1,5 @@
+package com.example.carteiradigital.feature.carteirinha.presentation
+
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -20,8 +22,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.carteiradigital.R
 import com.example.carteiradigital.core.designsystem.theme.CarteiraDigitalTheme
-import com.example.carteiradigital.feature.carteirinha.presentation.CarteirinhaEvent
-import com.example.carteiradigital.feature.carteirinha.presentation.CarteirinhaUiState
 import com.example.carteiradigital.feature.carteirinha.presentation.component.PerfilAluno
 import com.example.carteiradigital.feature.domain.model.Carteirinha
 import com.rafaelcosta.myapplication.QrCode
@@ -34,7 +34,7 @@ fun CarteirinhaContent(
 ) {
     Box(modifier = modifier.fillMaxSize()) {
         Image(
-            painter = painterResource(R.drawable.miata),
+            painter = painterResource(R.drawable.senai),
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier
@@ -119,7 +119,7 @@ private fun CarteirinhaDadosContent(
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun CarteirinhaContentPreviewClaro() {
+fun CarteiraContentPreviewClaro() {
     CarteiraDigitalTheme(darkTheme = false) {
         CarteirinhaContent(
             uiState = CarteirinhaUiState(

@@ -1,10 +1,14 @@
 package com.example.carteiradigital.feature.auth.presentation
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.carteiradigital.feature.auth.data.repository.AuthRepository
+import com.example.carteiradigital.feature.auth.data.repository.FakeAuthRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 
 class LoginViewModel(
     private val repository: AuthRepository = FakeAuthRepository()
