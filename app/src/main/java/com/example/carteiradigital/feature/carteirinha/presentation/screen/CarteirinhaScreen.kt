@@ -3,12 +3,15 @@ package com.example.carteiradigital.feature.carteirinha.presentation.screen
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.carteiradigital.core.designsystem.component.AppDrawerItem
 import com.example.carteiradigital.core.designsystem.component.AppScaffold
 import com.example.carteiradigital.feature.carteirinha.presentation.CarteirinhaContent
 import com.example.carteiradigital.feature.carteirinha.presentation.CarteirinhaEvent
+import com.example.carteiradigital.feature.carteirinha.presentation.CarteirinhaViewModel
 
 @Composable
 fun CarteirinhaScreen(
